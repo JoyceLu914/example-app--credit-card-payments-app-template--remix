@@ -1,16 +1,28 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "<App Name>"
-client_id = "<API Client ID>"
-application_url = "https://example.com"
-embedded = false
+client_id = "3216e087313e2e6ea4a27d7027369f7c"
+name = "example-credit-card-app"
+handle = "example-credit-card-app"
+application_url = "https://workstation-finds-britney-includes.trycloudflare.com"
+embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_payment_gateways,write_payment_sessions"
 
+[auth]
+redirect_urls = [
+  "https://workstation-finds-britney-includes.trycloudflare.com/auth/callback",
+  "https://workstation-finds-britney-includes.trycloudflare.com/auth/shopify/callback",
+  "https://workstation-finds-britney-includes.trycloudflare.com/api/auth/callback"
+]
+
 [webhooks]
-api_version = "2023-07"
+api_version = "2024-10"
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "joyce-payment-app.myshopify.com"
+automatically_update_urls_on_dev = true
